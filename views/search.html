@@ -1,0 +1,79 @@
+﻿<div class="search-box-inner">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="search-box map">
+                    <form role="form" id="form-map" class="form-map form-search">
+                        <h2>Search Your Property</h2>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="search-box-property-id" placeholder="Property ID">
+                        </div>
+                        <div class="form-group">
+                            <select name="type">
+                                <option value="">Category</option>
+                                <option value="RCRE">Commercial Real Estate</option>
+                                <option value="RHFR">Housing For Rent</option>
+                                <option value="RHFS">Housing For Sale</option>
+                                <option value="RHFR">Housing For Rent</option>
+                                <option value="RSUB">Housing Sublets</option>
+                                <option value="RSWP">Housing Swaps</option>
+                                <option value="RSHR">Vacation Properties</option>
+                                <option value="RSWP">Housing Swaps</option>
+                                <option value="ROTH">Other</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <ul ng-repeat="state in states" class="hide">
+                                <li>{{state.full_name}}</li>
+                            </ul>
+                            <select ng-model="modSelectedState" id="selectState" name="selectState"
+                                    ng-options="state as state.full_name for state in states">
+                                <option value="">Select package...</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <select name="city" ng-model="modSelectedCities"
+                                    ng-options="city as city.full_name for city in cities">
+                                <option value="">City</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <select name="district">
+                                <option value="">District</option>
+                                <option value="1">Manhattan</option>
+                                <option value="2">The Bronx</option>
+                                <option value="3">Brooklyn</option>
+                                <option value="4">Queens</option>
+                                <option value="5">Staten Island</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <select name="property-type">
+                                <option value="">Property Type</option>
+                                <option value="1">Apartment</option>
+                                <option value="2">Condominium</option>
+                                <option value="3">Cottage</option>
+                                <option value="4">Construction Site</option>
+                                <option value="5">Industrial Site</option>
+                                <option value="6">Garage</option>
+                                <option value="7">Land</option>
+                                <option value="8">Houseboat</option>
+                                <option value="9">Villa</option>
+                                <option value="10">Single Family</option>
+                                <option value="11">Vineyard</option>
+                            </select>
+                        </div><!-- /.form-group -->
+                        <div class="form-group">
+                            <div class="price-range">
+                                <input id="price-input" type="text" name="price" value="1000;299000">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-default">Search Now</button>
+                        </div><!-- /.form-group -->
+                    </form><!-- /#form-map -->
+                </div><!-- /.search-box.map -->
+            </div><!-- /.col-md-3 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div>
